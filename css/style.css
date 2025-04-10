@@ -454,33 +454,3 @@ body {
     align-items: center;
     color: white;
 }
-
-/********* Estilos para el h1 fijo */
-.fixed-h2 {
-    position: fixed;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    color: #FFD700;
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-    z-index: 1000;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.fixed-h2:hover {
-    opacity: 1;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
-}
-
-/* Asegurar que no interfiera en móviles */
-@media (max-width: 768px) {
-    .fixed-h2 {
-        display: none;
-    }
-}
