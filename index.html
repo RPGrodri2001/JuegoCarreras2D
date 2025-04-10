@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF0000'><path d='M18.9 5.5c-.2-.6-.8-1-1.5-1h-11c-.7 0-1.3.4-1.5 1l-2 6v7c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-1h12v1c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-7l-2-6zm-12.9 7c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm12 0c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z'/></svg>">
+    <title>Juego de Carreras 2D by Gino 🚗💨</title>
+
+</head>
+<body>
+    <div id="orientationWarning">
+        <p>Por favor, gira tu dispositivo a modo vertical para jugar</p>
+    </div>
+
+    <div id="gameContainer">
+        <div id="road"></div>
+        <div id="car"></div>
+        <div id="scoreBoard">Puntuación: 0</div>
+        <div id="levelIndicator">Nivel: 1</div>
+        <div id="soundToggle" class="sound-enabled"></div>
+        <div id="volumeControl">
+            <label for="volume">Volumen:</label>
+            <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="0.3">
+        </div>
+
+        <div id="startScreen">
+            <div class="instructions-container">
+
+                <h1 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <span style="color: #79b75f;">●</span> 
+                    Carrera 2D - by Gino 
+                    <span style="color: #FFD700;">●</span>
+                  </h1>  
+                     <div class="instructions-content">
+                    <p>¡Bienvenido al juego de carreras 2D!</p>
+                    <p>Controles:</p>
+                    <ul>
+                        <li>Flechas izquierda/derecha: Movimiento lateral</li>
+                        <li>Flechas arriba/abajo: Movimiento vertical</li>
+                    </ul>
+                    <p>Objetivo:</p>
+                    <ul>
+                        <li>Evita los otros coches</li>
+                        <li>Acumula puntos</li>
+                        <li>Supera tus récords</li>
+                    </ul>
+                    <p>Dificultad:</p>
+                    <ul>
+                        <li>La velocidad aumenta cada 1000 puntos</li>
+                        <li>Los obstáculos aparecen más frecuentemente</li>
+                    </ul>
+                    <p>Consejos:</p>
+                    <ul>
+                        <li>Mantente en movimiento</li>
+                        <li>Anticipa los obstáculos</li>
+                        <li>Controla tu velocidad</li>
+                    </ul>
+                </div>
+                <button id="startButton">¡Jugar!</button>
+            </div>
+        </div>
+
+        <div id="gameOverScreen">
+            <div class="game-over-content">
+                <h1>¡Game Over!</h1>
+                <p>Tu puntuación: <span id="finalScore">0</span></p>
+                <p>Mejor puntuación: <span id="highScore">0</span></p>
+                <button id="restartButton">Jugar de nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobileControls">
+        <div class="control-group">
+            <div class="control-btn up" id="upBtn">↑</div>
+        </div>
+        <div class="control-group">
+            <div class="control-btn left" id="leftBtn">←</div>
+            <div class="control-btn right" id="rightBtn">→</div>
+        </div>
+        <div class="control-group">
+            <div class="control-btn down" id="downBtn">↓</div>
+        </div>
+    </div>
+
+</body>
+<script src="./js/main.js"></script>
+</html>
